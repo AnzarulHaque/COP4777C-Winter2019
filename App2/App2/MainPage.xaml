@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource AppBarItemPointerOverBackgroundThemeBrush}">
+
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="138" VerticalAlignment="Top" Width="340" Source="Assets/book-logo.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397" FontWeight="Bold">
+            <Run Foreground="Teal" FontFamily="Georgia" FontSize="26" FontStyle="Italic">Book Inventory Application</Run>
+        </TextBlock>
+
+        <StackPanel
+        HorizontalAlignment="Left" Margin="46,243,0,34" VerticalAlignment="Stretch">
+            <HyperlinkButton Content="1. View All Books" FontSize="18"  Click="HyperlinkButton_Click_ViewBook" Foreground="#FF2D29CC" FontWeight="Bold" FontStyle="Italic"/>
+        </StackPanel>
+
+        <StackPanel
+        HorizontalAlignment="Left" Margin="46,288,0,34" VerticalAlignment="Stretch">
+            <HyperlinkButton Content="2. Enter New Book Detail" FontSize="18" Click="HyperlinkButton_Click_NewBook" Foreground="#FF2D29CC" FontWeight="Bold" FontStyle="Italic"/>
+        </StackPanel>
+
+        <StackPanel
+        HorizontalAlignment="Left" Margin="46,330,0,34" VerticalAlignment="Stretch">
+            <HyperlinkButton Content="3. Update Book Detail" FontSize="18" Click="HyperlinkButton_Click_UpdateBook" Foreground="#FF2D29CC" FontWeight="Bold" FontStyle="Italic"/>
+        </StackPanel>
+
+        <StackPanel
+        HorizontalAlignment="Left" Margin="47,373,0,34" VerticalAlignment="Stretch">
+            <HyperlinkButton Content="4. Delete Book Entry" FontSize="18" Click="HyperlinkButton_Click_DeleteBook" FontWeight="Bold" RequestedTheme="Dark" Foreground="#FF2D29CC" FontStyle="Italic"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

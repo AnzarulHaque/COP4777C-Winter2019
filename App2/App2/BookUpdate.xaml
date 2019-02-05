@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="App2.BookUpdate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource AppBarItemPointerOverBackgroundThemeBrush}">
+
+    <Grid>
+
+        <ListView Name="ListItems" Margin="36,177,35,150">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox Name="CheckBoxComplete" IsChecked="{Binding Complete, Mode=TwoWay}" Checked="CheckBoxComplete_Checked" Content="{Binding BookTitle}" Margin="10,5" VerticalAlignment="Center"/>
+                        <TextBox Name="txtBxAuthor" Text="{Binding Author}" Margin="10,5" VerticalAlignment="Center" Width="110"/>
+                        <TextBox Name="txtBxQuantity" Text="{Binding Quantity}" Margin="10,5" VerticalAlignment="Center" Width="75"/>
+                        <TextBox Name="txtBxLastUpdated" Text="{Binding LastUpdated}" Margin="10,5" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <TextBlock HorizontalAlignment="Left" Margin="129,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" FontSize="20">
+        <Run Foreground="Teal" FontFamily="Georgia" FontSize="24" FontStyle="Italic">Update Book Entry</Run>
+        </TextBlock>
+
+        <Button x:Name="btnFetchBooks" Content="Retrieve Books to Update" HorizontalAlignment="Left" Margin="36,119,0,0" VerticalAlignment="Top" Foreground="Aqua" Click="btnViewBookInventory"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Background="LightSteelBlue" Margin="272,635,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonRefresh" Content="Update" Background="LightSteelBlue" HorizontalAlignment="Left" Margin="172,635,0,0" VerticalAlignment="Top" Click="ButtonRefresh_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" Background="LightSteelBlue" Margin="92,635,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+    </Grid>
+</Page>
